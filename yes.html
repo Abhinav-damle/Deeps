@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitioning Content</title>
+    <link rel="stylesheet" href="./yes_style.css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .gif_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 800px; /* Adjust width */
+            height: 450px; /* Adjust height */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head> 
+<body>
+    <div class="container" id="content">
+        <!-- First content (GIF and text) -->
+        <h1 class="header_text">Hurrayyyy!!</h1>
+        <div class="gif_container">
+            <img id="gifImage" src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
+        </div>
+    </div>
+
+    <script>
+        // Function to replace the content after 10 seconds
+        setTimeout(() => {
+            document.getElementById("content").innerHTML = `
+                <h1 class="header_text">Let me give you a small glimpse of our future</h1>
+                <div class="gif_container">
+                    <!-- Embedded YouTube Video -->
+                   <iframe src="https://www.youtube.com/embed/r8pw8XHmLxg?autoplay=1&vq=hd1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+                </div>
+            `;
+        }, 10000); // 10 seconds delay
+    </script>
+</body> 
+</html>
